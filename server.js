@@ -34,49 +34,50 @@ app.engine("liquid", engine.express());
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set("views", "./views");
 
-// ophalen van stories, audio en buddy data
+// ophalen van stories, playlist data
 const storyResponse = await fetch(
   `https://fdnd-agency.directus.app/items/tm_story?fields=*.*`
 );
 const storyResponseJSON = await storyResponse.json();
 
-const audioResponse = await fetch(
-  `https://fdnd-agency.directus.app/items/tm_audio`
-);
-const audioResponseJSON = await audioResponse.json();
+// const audioResponse = await fetch(
+//   `https://fdnd-agency.directus.app/items/tm_audio`
+// );
+// const audioResponseJSON = await audioResponse.json();
 
-const buddyResponse = await fetch(
-  `https://fdnd-agency.directus.app/items/tm_buddy`
-);
-const buddyResponseJSON = await buddyResponse.json();
+// const buddyResponse = await fetch(
+//   `https://fdnd-agency.directus.app/items/tm_buddy`
+// );
+// const buddyResponseJSON = await buddyResponse.json();
 
 const playlistResponse = await fetch(
   "https://fdnd-agency.directus.app/items/tm_playlist"
 );
 const playlistResponseJSON = await playlistResponse.json();
+
 // inladen van de index pagina met de story en audio data
-
-
 app.get("/", async function (request, response) {
 
   response.render("index.liquid", {
     story: storyResponseJSON.data,
-    audio: audioResponseJSON.data,
+    // audio: audioResponseJSON.data,
   });
 });
 
+// story detail pagina op basis van ID
 app.get("/story/:id", async function (request, response) {
   // Render index.liquid uit de Views map
   // Geef hier eventueel data aan mee
   const storydetailResponse = await fetch(`https://fdnd-agency.directus.app/items/tm_story/` + request.params.id);
   const storydetailResponseJSON = await storydetailResponse.json();
 
- 
+  // inladen van de detail data
   response.render("storydetail.liquid", {
     storydetail: storydetailResponseJSON.data,
   });
 });
 
+// POST voor het aanmaken van een playlist
 app.post('/playlist', async function (request, response) {
   // console.log(request.body)
   // eerst fetch ik naar de juiste informatie
@@ -93,19 +94,20 @@ app.post('/playlist', async function (request, response) {
   console.log(results)
   response.redirect(303, '/')
 })
+// delete knop N/A
+// app.post('/delete/:id', async function (request, response) {
+//   // console.log(request.body)
 
-app.post('/delete/:id', async function (request, response) {
-  // console.log(request.body)
+//   const deleteplaylist = await fetch(`https://fdnd-agency.directus.app/items/tm_playlist`,{
+//     method: 'DELETE',
 
-  const deleteplaylist = await fetch(`https://fdnd-agency.directus.app/items/tm_playlist`,{
-    method: 'DELETE',
+//   });
+//   // console.log(deleteplaylist)
 
-  });
-  // console.log(deleteplaylist)
+//   response.redirect(303, '/')
+// })
 
-  response.redirect(303, '/')
-})
-
+// playlist pagina data inladen
 app.get("/playlist", async function (request, response) {
 
   // Render index.liquid uit de Views map
@@ -116,13 +118,6 @@ app.get("/playlist", async function (request, response) {
   });
 });
 
-// Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
-// Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
-app.post("/", async function (request, response) {
-  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
-  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-  response.redirect(303, "/");
-});
 
 app.use((req, res, next) => {
   res.status(404).render("error.liquid");

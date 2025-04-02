@@ -8,10 +8,13 @@
   <button type="submit">verstuur</button>
 </form>
 
-{% for playlist in playlist %}
-<form>
-  <h2>{{ playlist.title }}</h2>
-  <p>{{ playlist.description }}</p>
-  <button type="submit" name="delete">Verwijder Playlist</button>
-</form>
+<main>
+  <ul>
+    {% for playlist in playlist %}
+    <li>
+      <h2>{{ playlist.title }}</h2>
+      <p>{{ playlist.description }}</p>
+    </li>
+  </ul>
+</main>
 {% endfor %}
