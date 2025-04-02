@@ -65,7 +65,7 @@ app.get("/", async function (request, response) {
   });
 });
 
-app.get("/storydetail/:id", async function (request, response) {
+app.get("/story/:id", async function (request, response) {
   // Render index.liquid uit de Views map
   // Geef hier eventueel data aan mee
   const storydetailResponse = await fetch(`https://fdnd-agency.directus.app/items/tm_story/` + request.params.id);
