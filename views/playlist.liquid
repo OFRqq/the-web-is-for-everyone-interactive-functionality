@@ -1,0 +1,18 @@
+{% render 'partials/head.liquid', title: 'Tumi Mundo' %}
+
+<h1>Playlists</h1>
+
+<form method="POST" action="/playlist">
+  <input type="text" name="title" placeholder="title">
+  <input type="text" name="description" placeholder="description">
+  <button type="submit">verstuur</button>
+</form>
+
+{% for playlist in playlist %}
+<form>
+  <h2>{{ playlist.title }}</h2>
+  <p>{{ playlist.description }}</p>
+  <button type="submit" name="delete">Verwijder Playlist</button>
+</form>
+
+{% endfor %}

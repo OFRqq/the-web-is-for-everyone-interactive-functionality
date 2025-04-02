@@ -1,0 +1,11 @@
+<li class="story-container">
+    <form method="POST" action="/favorite">
+        <h2>{{ story.title }}</a></h2>
+        <a href="/storydetail/{{ story.id  }}">listen to story {{ story.id }}</a>
+        <p>{{ story.summary }}</p>
+        <input type="hidden" value="{{ story.id }}" name="story_id">
+
+        <audio controls src="https://fdnd-agency.directus.app/assets/{{ story.audio[0].audio_file }}"></audio>
+        <img src="https://fdnd-agency.directus.app/assets/{{ story.image.id }}">
+    </form>
+</li>

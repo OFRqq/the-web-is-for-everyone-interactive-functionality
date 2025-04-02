@@ -1,0 +1,15 @@
+{%  render 'partials/head.liquid', title: 'Tumi Mundo' %}
+
+
+{% if storydetail %}
+    <h1>{{ storydetail.title }}</h1>
+    <p>{{ storydetail.summary }}</p>
+
+    <audio controls src="https://fdnd-agency.directus.app/assets/{{ storydetail.audio[0].audio_file }}"></audio>
+    <img src="https://fdnd-agency.directus.app/assets/{{ storydetail.image.id }}">
+
+    <a href="/">Back to all stories</a>
+{% else %}
+    <p>Story not found.</p>
+{% endif %}
+
