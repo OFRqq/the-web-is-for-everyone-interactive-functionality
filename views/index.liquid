@@ -2,12 +2,14 @@
 
 <h1>All stories</h1>
 
-    <label>
-        <input class="searchbar" type="search" role="searchbox" placeholder="search for stories">
-    </label>
+<label>
+    <input class="searchbar" type="search" role="searchbox" placeholder="search for stories">
+</label>
 
-<form class="filtering">
-    <details>Animal
+<details>
+    <summary>Filters</summary>
+    <details>
+        <summary>Animal</summary>
         <la>
             <li><a href="?filter=animal.6">6</a></li>
             <li><a href="?filter=animal.7">7</a></li>
@@ -15,7 +17,8 @@
         </la>
     </details>
 
-    <details>Language
+    <details>
+        <summary>Language</summary>
         <la>
             <li><a href="?filter=language.1">1</a></li>
             <li><a href="?filter=language.2">2</a></li>
@@ -24,25 +27,27 @@
             <li><a href="?filter=language.7">7</a></li>
         </la>
     </details>
-    <details>Season
+    <details>
+        <summary>Season</summary>
         <la>
             <li><a href="?filter=season"></a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
         </la>
     </details>
-    <details>Sorting
+    <details>
+        <summary>Sorting</summary>
         <la>
             <li><a href="?sort=season"></a></li>
             <li><a href="?sort=animal"></a></li>
         </la>
     </details>
-</form>
+</details>
 
 <main>
     <ul class="stories-container">
         {% for story in story %}
-            {% render 'partials/story.liquid', story: story %}
+        {% render 'partials/story.liquid', story: story %}
         {% endfor %}
     </ul>
 </main>

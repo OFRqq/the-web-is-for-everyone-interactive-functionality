@@ -92,7 +92,7 @@ app.post('/playlist', async function (request, response) {
     }
   });
   console.log(results)
-  response.redirect(303, '/')
+  response.redirect(303, '/playlist/?succes=De playlist is toegevoegd')
 })
 // delete knop N/A
 // app.post('/delete/:id', async function (request, response) {
