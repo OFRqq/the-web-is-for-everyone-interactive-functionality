@@ -6,15 +6,13 @@ html {
             color:white;
         }
 
-        .story {
+        .story-detail {
             text-align: center;
+            color:white;
+            font-family: Poppins;
 
             img {
                 border-radius: var(--br-md);
-            }
-            p {
-                color:white;
-                font-family: Poppins;
             }
         }
 
