@@ -1,11 +1,12 @@
 {% render 'partials/head.liquid', title: 'Tumi Mundo' %}
 
-<a href="/">Back to all stories</a>
 {% if storydetail %}
 <h1>{{ storydetail.title }}</h1>
+<img src="https://fdnd-agency.directus.app/assets/{{ storydetail.image }}" alt="story image">
 <p>{{ storydetail.summary }}</p>
-<audio controls src="https://fdnd-agency.directus.app/assets/{{ storydetail.audio[0].audio_file }}"></audio>
-<img src="https://fdnd-agency.directus.app/assets/{{ storydetail.image.id }}">
+<audio controls src="https://fdnd-agency.directus.app/assets/{{ storydetail.audio[0]}}"></audio>
+<a href="/">Back to all stories</a>
 {% else %}
-<p>Story not found.</p>
+<h1>Story not found.</h1>
+<a href="/">Back to all stories</a>
 {% endif %}
