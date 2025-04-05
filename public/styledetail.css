@@ -6,5 +6,17 @@ html {
             color:white;
         }
 
+        .story {
+            text-align: center;
+
+            img {
+                border-radius: var(--br-md);
+            }
+            p {
+                color:white;
+                font-family: Poppins;
+            }
+        }
+
     }
 }
