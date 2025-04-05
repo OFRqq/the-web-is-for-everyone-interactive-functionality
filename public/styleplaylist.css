@@ -1,0 +1,10 @@
+html {
+    body {
+        .form-playlist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height:50px;
+        
+        }
+    }
+}
