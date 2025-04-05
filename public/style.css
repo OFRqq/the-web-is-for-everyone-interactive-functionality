@@ -15,14 +15,16 @@ html {
     height: 100%;
 
     body {
-        background: var(--background-color);
         margin-left: clamp(0rem, -8.3333rem + 37.037vw, 25rem);
         margin-right: clamp(0rem, -8.3333rem + 37.037vw, 25rem);
+
+        background: var(--background-color);
 
         h1 {
             margin-bottom: 20px;
             margin-top: 20px;
             text-align: center;
+
             font-size: var(--lg);
         }
 
@@ -35,6 +37,7 @@ html {
                 width: 16px;
                 height: 16px;
                 margin: 8px;
+
                 cursor: pointer;
                 border: none;
                 background: url("assets/Icons/basic/search.svg") no-repeat;
@@ -49,6 +52,25 @@ html {
             }
         }
 
+        .detail-container {
+            text-align: center;
+            margin-top: 10px;
+            margin-left: clamp(1rem, -2.4167rem + 15.1852vw, 11.25rem);;
+            margin-right: clamp(1rem, -2.4167rem + 15.1852vw, 11.25rem);;
+
+            background: var(--button-color);
+            border-radius: var(--br-sm);
+            color: var(--story-text-white);
+            font-family: var(--primary-font);
+            list-style: none;
+
+            
+        }
+        .detail-container:hover {
+            background-color: #7f46f9;
+            transition: .3s;
+        }
+
         .stories-container {
             height: 50vh;
             display: flex;
@@ -56,7 +78,7 @@ html {
             overflow-x: scroll;
 
             li {
-                width:320px;
+                width: 320px;
                 padding: 10px;
                 margin: 20px 30px 20px 30px;
 
@@ -100,10 +122,10 @@ html {
                     font-size: var(--sm);
                     text-decoration: none;
                     text-align: center;
-                    background-color: var( --button-popup-color);
+                    background-color: var(--button-color);
                     width: 10rem;
-                    color:var(--story-background-color);
-                    border-radius:var(--br-sm);
+                    color: var(--story-background-color);
+                    border-radius: var(--br-sm);
                 }
                 a:hover {
                     background-color: #7f46f9;
@@ -113,32 +135,24 @@ html {
         }
 
         footer {
+            margin: 10px;
             text-align: center;
+
+            a {
+                padding: 2px 70px 2px 70px;
+
+                text-decoration: none;
+                border-radius: var(--br-sm);
+                color: var(--story-text-white);
+                font-family: var(--primary-font);
+                background: var(--button-color);
+            }
+            a:hover {
+                background-color: #7f46f9;
+                transition: .3s;
+            }
         }
 
     }
-
-}
-
-.filtering {
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-
-    details {
-        background-color: var(--button-popup-color);
-    }
-}
-
-.detail-container {
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 20vw;
-    margin-right: 20vw;
-
-    background: white;
-    border-radius: var(--br-sm);
-    color: black;
-    font-family: var(--primary-font);
 
 }

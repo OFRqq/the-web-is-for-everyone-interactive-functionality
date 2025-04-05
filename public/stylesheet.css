@@ -14,8 +14,8 @@ body {
     --story-text-black: #000000;
     --story-text-white: #ffffff;
 
-    --button-popup-color: #9264F4;
-   
+    --button-color: #9264F4;
+
     /* BORDER-RADIUS */
     --br-xs: 0.125rem;
     --br-sm: 0.25rem;
@@ -73,3 +73,4 @@ main {
     max-width: fit-content;
     margin: 1vw auto;
 }
+
