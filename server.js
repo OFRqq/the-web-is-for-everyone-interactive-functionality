@@ -114,7 +114,6 @@ app.get("/playlist", async function (request, response) {
   // Geef hier eventueel data aan mee
   response.render("playlist.liquid", {
     playlist: playlistResponseJSON.data,
-    story: storyResponseJSON.data,
   });
 });
 
