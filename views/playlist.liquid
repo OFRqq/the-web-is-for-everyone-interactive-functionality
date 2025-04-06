@@ -5,7 +5,7 @@
 <form class="form-playlist" method="POST" action="/playlist">
   <input class="title" type="text" name="title" placeholder="title">
   <input class="description" type="text" name="description" placeholder="description">
-  <button type="submit">verstuur</button>
+  <button type="submit" onClick="window.location.reload();">Playlist toevoegen</button>
 </form>
 
 <main class="playlist-container">
@@ -14,11 +14,11 @@
     <li class="playlist">
       <h2>{{ playlist.title }}</h2>
       <p>{{ playlist.description }}</p>
-      {% comment %} {% if playlist.image %}
+     {% if playlist.image %}
       <img rsc="https://fdnd-agency.directus.app/assets/{{ playlist.image }}" alt="playlist image not loading ">
       {% else %}
       <p>[no image available]</p>
-      {% endif %} {% endcomment %}
+      {% endif %} 
     </li>
     {% endfor %}
   </ul>

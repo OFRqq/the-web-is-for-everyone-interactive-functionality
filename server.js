@@ -94,22 +94,9 @@ app.post('/playlist', async function (request, response) {
   console.log(results)
   response.redirect(303, '/playlist/?succes=De playlist is toegevoegd')
 })
-// delete knop N/A
-// app.post('/delete/:id', async function (request, response) {
-//   // console.log(request.body)
-
-//   const deleteplaylist = await fetch(`https://fdnd-agency.directus.app/items/tm_playlist`,{
-//     method: 'DELETE',
-
-//   });
-//   // console.log(deleteplaylist)
-
-//   response.redirect(303, '/')
-// })
 
 // playlist pagina data inladen
 app.get("/playlist", async function (request, response) {
-
   // Render index.liquid uit de Views map
   // Geef hier eventueel data aan mee
   response.render("playlist.liquid", {
