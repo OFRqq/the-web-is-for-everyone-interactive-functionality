@@ -20,7 +20,8 @@ Voor Tumi Mundo heb ik een website gemaakt waarbij verhalen kunnen worden bekeke
 
 ## Gebruik
 De user story bestaat uit het toevoegen en bekijken van een playlist. Bij het aanmaken van een playlist word de pagina refreshed en verandert de route naar <br>
-[ https://the-web-is-for-everyone-interactive-9753.onrender.com/playlist/`?succes=De%20playlist%20is%20toegevoegd` ], deze geeft feedback over dat de interactie gelukt is.
+`https://the-web-is-for-everyone-interactive-9753.onrender.com/playlist/?succes=De%20playlist%20is%20toegevoegd`
+deze geeft feedback over dat de interactie gelukt is.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framework of library gebruikt? -->
