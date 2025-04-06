@@ -20,21 +20,33 @@ Voor Tumi Mundo heb ik een website gemaakt waarbij verhalen kunnen worden bekeke
 
 ## Gebruik
 De user story bestaat uit het toevoegen en bekijken van een playlist. Bij het aanmaken van een playlist word de pagina refreshed en verandert de route naar <br>
-`https://the-web-is-for-everyone-interactive-9753.onrender.com/playlist/?succes=De%20playlist%20is%20toegevoegd`
+`https://the-web-is-for-everyone-interactive-9753.onrender.com/playlist/?succes=De%20playlist%20is%20toegevoegd`.
 deze geeft feedback over dat de interactie gelukt is. _de data van nieuwe playlists laad pas in nadat de website opnieuw gestart is._
 
 https://github.com/user-attachments/assets/84bb08c1-8de9-4510-b4ab-d132e4f68382
 
 ## Kenmerken
-Ik heb gebruik gemaakt met partials in de view folder, zo heb ik een head.liquid en een story.liquid. deze kan ik direct inladen op een pagina waardoor ik code niet hoef te herhalen en efficient kan hergebruiken.
+
+### if else endif
+In mijn project heb ik veel gebruik gemaakt van de if else endif liquid template. Hiermee kan ik een actie uitvoeren wanneer de data actief is, maar wanneer deze niet gevonden word kan ik een andere actie uitvoeren wat handig is als er bijvoorbeeld een <img> ontbreekt. 
+
+https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/dea2ef25705dc9c19865b92e668542bc8e7dbdbe/views/playlist.liquid#L17-L21
+_Als er een image gevonden word laad hij deze in, als deze niet gevonden word geeft hij aan dat er geen image is._
+
+https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/dea2ef25705dc9c19865b92e668542bc8e7dbdbe/views/storydetail.liquid#L3-L16
+_in dit template worden de detail pagina's van stories ingeladen, als deze niet correct zijn gespeld of niet bestaan word de pagina ingeladen met Story not found. _
+
+
+### partials
+Ik heb gebruik gemaakt met partials in de view folder, zo heb ik een head.liquid en een story.liquid. deze kan ik direct inladen op een pagina waardoor ik code niet hoef te herhalen en efficient kan gebruiken.
 
 https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/8a318fea725c1587b02e0051edad9b760dd6b440/views/partials/head.liquid#L1-L13
 
-     {% render 'partials/story.liquid', story: story %}
+deze render je in een andere liquid file met html via {% render 'partials/story.liquid', story: story %}
      
 https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/8a318fea725c1587b02e0051edad9b760dd6b440/views/partials/story.liquid#L1-L10
 
-{% render 'partials/head.liquid', title: 'Tumi Mundo' %}
+deze render je in een andere liquid file met html via {% render 'partials/head.liquid', title: 'Tumi Mundo' %}
 
 ## Installatie
 Voor dit project moet je eerst node.JS installeren, dit kan op nodejs.org.
