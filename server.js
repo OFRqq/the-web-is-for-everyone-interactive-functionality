@@ -99,6 +99,11 @@ app.post('/playlist', async function (request, response) {
 app.get("/playlist", async function (request, response) {
   // Render index.liquid uit de Views map
   // Geef hier eventueel data aan mee
+  const playlistResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/tm_playlist"
+  );
+  const playlistResponseJSON = await playlistResponse.json();
+  
   response.render("playlist.liquid", {
     playlist: playlistResponseJSON.data,
   });
