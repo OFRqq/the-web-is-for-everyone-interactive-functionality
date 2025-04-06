@@ -15,11 +15,15 @@
       <h2>{{ playlist.title }}</h2>
       <p>{{ playlist.description }}</p>
       {% if playlist.image %}
-      <img rsc="https://fdnd-agency.directus.app/assets/{{ playlist.image }}">
+      <img rsc="https://fdnd-agency.directus.app/assets/{{ playlist.image }}" alt="playlist image not loading ">
       {% else %}
       <p>[no image available]</p>
     </li>
-      {% endif %}
-  {% endfor %}
+    {% endif %}
+    {% endfor %}
   </ul>
 </main>
+
+<footer>
+  <a href="/">Back to all stories</a>
+  </footer>
