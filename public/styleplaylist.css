@@ -4,7 +4,23 @@ html {
             display: grid;
             grid-template-columns: 1fr 1fr;
             height:50px;
-        
+            border: none;
+        .title {
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+        .description {
+            grid-area: 2 / 1 / 3 / 3 ;
+        }
+        }
+        .playlist-container {
+            height: 70vh;
+            overflow-x: scroll;
+        .playlist {
+            background-color:white;
+            font-family: Poppins;
+            list-style: none;
+            margin: 10px;
+        }
         }
     }
 }

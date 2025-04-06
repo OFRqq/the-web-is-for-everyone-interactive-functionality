@@ -8,13 +8,18 @@
   <button type="submit">verstuur</button>
 </form>
 
-<main>
+<main class="playlist-container">
   <ul>
     {% for playlist in playlist %}
-    <li>
+    <li class="playlist">
       <h2>{{ playlist.title }}</h2>
       <p>{{ playlist.description }}</p>
+      {% if playlist.image %}
+      <img rsc="https://fdnd-agency.directus.app/assets/{{ playlist.image }}">
+      {% else %}
+      <p>[no image available]</p>
     </li>
+      {% endif %}
+  {% endfor %}
   </ul>
 </main>
-{% endfor %}
