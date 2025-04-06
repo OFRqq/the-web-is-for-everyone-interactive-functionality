@@ -27,8 +27,8 @@ https://github.com/user-attachments/assets/84bb08c1-8de9-4510-b4ab-d132e4f68382
 
 ## Kenmerken
 
-### if else endif
-In mijn project heb ik veel gebruik gemaakt van de if else endif liquid template. Hiermee kan ik een actie uitvoeren wanneer de data actief is, maar wanneer deze niet gevonden word kan ik een andere actie uitvoeren wat handig is als er bijvoorbeeld een <img> ontbreekt. 
+### control flow
+In mijn project heb ik veel gebruik gemaakt van de [control flow liquid template](https://shopify.github.io/liquid/tags/control-flow/). Hiermee kan ik een actie uitvoeren wanneer de data actief is, maar wanneer deze niet gevonden word kan ik een andere actie uitvoeren wat handig is als er bijvoorbeeld een <img> ontbreekt. 
 
 https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/dea2ef25705dc9c19865b92e668542bc8e7dbdbe/views/playlist.liquid#L17-L21
 _Als er een image gevonden word laad hij deze in, als deze niet gevonden word geeft hij aan dat er geen image is._
