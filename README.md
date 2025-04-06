@@ -25,6 +25,8 @@ deze geeft overzichtelijke feedback dat de interactie gelukt is, ook refreshed d
 
 https://github.com/user-attachments/assets/84bb08c1-8de9-4510-b4ab-d132e4f68382
 
+_Een demonstratie over Tumi Mundo en de werking van playlists_
+
 ## Kenmerken
 
 ### control flow
