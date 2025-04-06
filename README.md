@@ -34,7 +34,8 @@ https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/
 _Als er een image gevonden word laad hij deze in, als deze niet gevonden word geeft hij aan dat er geen image is._
 
 https://github.com/OFRqq/the-web-is-for-everyone-interactive-functionality/blob/dea2ef25705dc9c19865b92e668542bc8e7dbdbe/views/storydetail.liquid#L3-L16
-_in dit template worden de detail pagina's van stories ingeladen, als deze niet correct zijn gespeld of niet bestaan word de pagina ingeladen met Story not found. _
+
+_in dit template worden de detail pagina's van stories ingeladen, als deze niet correct zijn gespeld of niet bestaan word de pagina ingeladen met Story not found_
 
 
 ### partials
