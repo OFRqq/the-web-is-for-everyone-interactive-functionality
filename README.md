@@ -19,11 +19,13 @@ Voor Tumi Mundo heb ik een website gemaakt waarbij verhalen kunnen worden bekeke
 [Live website](https://the-web-is-for-everyone-interactive-9753.onrender.com/)
 
 ## Gebruik
-De user story bestaat uit het toevoegen en bekijken van een playlist. Bij het aanmaken van een playlist word de pagina refreshed en verandert de route naar <br>
+De user story bestaat uit het toevoegen en bekijken van een playlist. Als ontwerpkeuze heb ik bij het aanmaken van een playlist een verandering in de route gemaakt <br>
 `https://the-web-is-for-everyone-interactive-9753.onrender.com/playlist/?succes=De%20playlist%20is%20toegevoegd`.
-deze geeft feedback over dat de interactie gelukt is. _de data van nieuwe playlists laad pas in nadat de website opnieuw gestart is._
+deze geeft overzichtelijke feedback dat de interactie gelukt is, ook refreshed de pagina en komt de playlist direct erbij. Deze geven duidelijk aan dat de interactie werkelijk wat deed.
 
 https://github.com/user-attachments/assets/84bb08c1-8de9-4510-b4ab-d132e4f68382
+
+_Een demonstratie over Tumi Mundo en de werking van playlists_
 
 ## Kenmerken
 
